@@ -19,10 +19,6 @@
     <span> | </span>
 
     <router-link to="/browser">Browser extension</router-link>-->
-
-    <span> | </span>
-
-    <router-link to="/punkangel">Punk Angel</router-link>
     
     <span> | </span>
 
