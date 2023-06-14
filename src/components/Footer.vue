@@ -25,6 +25,10 @@
     <span> | </span>
 
     <a target="_blank" href="https://blog.punk.domains">Blog</a> 
+
+    <span> | </span>
+
+    <a target="_blank" href="https://mirror.punk.domains">Mirror site</a> 
     
     <span> | </span>
 
