@@ -34,10 +34,6 @@
 
     <span> | </span>
 
-    <a target="_blank" href="https://punk-domains.4everland.app">Mirror site</a> 
-
-    <span> | </span>
-
     <a target="_blank" href="https://github.com/orgs/punk-domains-2/discussions/1">Contribute</a> 
   
   </div>
