@@ -2,7 +2,8 @@
 
 Punk Domains - Web3 Domains for DAOs
 
-https://punk.domains 
+- Link: https://punk.domains 
+- Mirror: https://mirror.punk.domains
 
 ## Quickstart
 
