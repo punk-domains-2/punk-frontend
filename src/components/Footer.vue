@@ -42,7 +42,7 @@
 
   <div class="container-fluid text-center">
 
-    <a class="icons" href="http://docs.punk.domains" target="_blank"><i class="bi bi-journal-text"></i></a>
+    <a class="icons" href="https://docs.punk.domains" target="_blank"><i class="bi bi-journal-text"></i></a>
 
     <a class="icons" target="_blank" href="https://gitlab.com/punk-domains"><i class="bi bi-git"></i></a>
 
@@ -50,7 +50,7 @@
 
     <a class="icons" target="_blank" href="https://twitter.com/PunkDomains"><i class="bi bi-twitter"></i></a>
 
-    <a class="icons" href="http://blog.punk.domains" target="_blank"><i class="bi bi-pencil-square"></i></a>
+    <a class="icons" href="https://blog.punk.domains" target="_blank"><i class="bi bi-pencil-square"></i></a>
     
   </div>
 

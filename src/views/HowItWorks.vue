@@ -94,7 +94,7 @@
 
       <p>
         <ul>
-          <li><a target="_blank" href="http://docs.punk.domains">Docs</a></li>
+          <li><a target="_blank" href="https://docs.punk.domains">Docs</a></li>
           <li><a target="_blank" href="https://gitlab.com/punk-domains">GitLab</a></li>
           <li><a target="_blank" href="https://discord.gg/8dSrwrAQeu">Discord</a></li>
           <li><a target="_blank" href="https://twitter.com/PunkDomains">Twitter</a></li>

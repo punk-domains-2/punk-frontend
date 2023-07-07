@@ -40,17 +40,17 @@
 
         <ul class="dropdown-menu dropdown-menu-end">
           <li><span class="dropdown-item" :key="tld" v-for="tld in enabledBuyingTlds" @click="changeTld(tld)">{{tld}}</span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://optimistic.domains')">.op <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://id.zkchat.net')">.zksoul <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://fantomnames.org')">.fantom <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://names.pooly.me')">.pool <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://smol.domains')">.smol <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://ppl.domains')">.ppl <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://www.kns.earth')">.klima <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://flr.domains')">.flr <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://songbird.domains')">.sgb <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://giveth.punk.domains')">.giveth <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('http://dns.dopewars.gg')">.dope <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://optimistic.domains')">.op <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://id.zkchat.net')">.zksoul <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://fantomnames.org')">.fantom <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://names.pooly.me')">.pool <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://smol.domains')">.smol <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://ppl.domains')">.ppl <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://www.kns.earth')">.klima <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://flr.domains')">.flr <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://songbird.domains')">.sgb <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://giveth.punk.domains')">.giveth <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://dns.dopewars.gg')">.dope <i class="bi bi-box-arrow-up-right" /></span></li>
         </ul>
       </div>
     </div>
