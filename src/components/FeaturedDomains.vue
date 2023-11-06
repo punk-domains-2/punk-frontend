@@ -4,7 +4,7 @@
 
     <div class="row mt-4">
 
-      <div class="col-2 mb-3">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://smol.domains">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -14,7 +14,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://id.zkchat.net">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -24,7 +24,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://names.pooly.me">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -34,7 +34,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://optimistic.domains">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -44,7 +44,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://songbird.domains">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -54,27 +54,7 @@
         </a>
       </div>
 
-      <div class="col-2">
-        <router-link tag="a" to="/partners/l2dao">
-          <div class="container text-center">
-            <p class="text-break mt-3">
-              .L2
-            </p>
-          </div>
-        </router-link>
-      </div>
-
-      <div class="col-2">
-        <a target="_blank" href="https://flr.domains">
-          <div class="container text-center">
-            <p class="text-break mt-3">
-              .flr
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://giveth.punk.domains">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -84,7 +64,27 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
+        <router-link tag="a" to="/">
+          <div class="container text-center">
+            <p class="text-break mt-3">
+              .arbi
+            </p>
+          </div>
+        </router-link>
+      </div>
+
+      <div class="col-md-2 mb-3">
+        <a target="_blank" href="https://flr.domains">
+          <div class="container text-center">
+            <p class="text-break mt-3">
+              .flr
+            </p>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://fantomnames.org">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -94,7 +94,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://ppl.domains">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -104,7 +104,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://www.kns.earth">
           <div class="container text-center">
             <p class="text-break mt-3">
@@ -114,7 +114,7 @@
         </a>
       </div>
 
-      <div class="col-2">
+      <div class="col-md-2 mb-3">
         <a target="_blank" href="https://dns.dopewars.gg">
           <div class="container text-center">
             <p class="text-break mt-3">

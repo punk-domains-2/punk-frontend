@@ -233,10 +233,7 @@ export default {
 
   mutations: { 
     setNetworkData(state) {
-      if (chainId.value === 137) {
-        state.networkName = "Polygon";
-        state.networkCurrency = "MATIC";
-      } else if (chainId.value === 1) {
+      if (chainId.value === 1) {
         state.networkName = "Ethereum";
         state.networkCurrency = "ETH";
       } else if (chainId.value === 10) {
