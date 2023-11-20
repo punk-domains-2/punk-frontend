@@ -42,7 +42,7 @@
           <li><span class="dropdown-item" :key="tld" v-for="tld in enabledBuyingTlds" @click="changeTld(tld)">{{tld}}</span></li>
           <li><span class="dropdown-item" @click="openUrl('https://optimistic.domains')">.op <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://id.zkchat.net')">.zksoul <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://fantomnames.org')">.fantom <i class="bi bi-box-arrow-up-right" /></span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://fantomname.org')">.fantom <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://names.pooly.me')">.pool <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://smol.domains')">.smol <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://ppl.domains')">.ppl <i class="bi bi-box-arrow-up-right" /></span></li>

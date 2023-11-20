@@ -29,7 +29,7 @@
                 <li class="dropdown-item" @click="openUrl('https://flr.domains')">Flare Domains (.flr) <i class="bi bi-box-arrow-up-right"></i></li>
                 <li class="dropdown-item" @click="openUrl('https://songbird.domains')">Songbird Domains (.sgb) <i class="bi bi-box-arrow-up-right"></i></li>
                 <li class="dropdown-item" @click="openUrl('https://id.satraps.io/')">Satraps ID (.satrap) <i class="bi bi-box-arrow-up-right"></i></li>
-                <li class="dropdown-item" @click="openUrl('https://fantomnames.org')">Fantom Names (.fantom) <i class="bi bi-box-arrow-up-right"></i></li>
+                <li class="dropdown-item" @click="openUrl('https://fantomname.org')">Fantom Names (.fantom) <i class="bi bi-box-arrow-up-right"></i></li>
                 <router-link tag="li" class="dropdown-item" to="/partners/l2dao">Layer2DAO (.L2 domain)</router-link>
                 <router-link tag="li" class="dropdown-item" to="/punkangel">Punk Angel (.punkangel domain)</router-link>
                 <li class="dropdown-item" @click="openUrl('https://ppl.domains')">People Domains (.ppl) <i class="bi bi-box-arrow-up-right"></i></li>
