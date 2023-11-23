@@ -33,6 +33,8 @@ export default function useChainHelpers() {
       return "Polygon Testnet";
     } else if (chainId === 421611) {
       return "Arbitrum Testnet";
+    } else if (chainId === 534352) {
+      return "Scroll Mainnet";
     } else if (chainId === 1313161555) {
       return "Aurora Testnet";
     } else {
@@ -119,6 +121,11 @@ export default function useChainHelpers() {
         // Arbitrum testnet
         urls = [
           "https://rinkeby.arbitrum.io/rpc"
+        ];
+      } else if (networkId === 534352) {
+        // Scroll mainnet
+        urls = [
+          "https://rpc.scroll.io/"
         ];
       } else if (networkId === 1313161555) {
         // Aurora testnet
@@ -285,6 +292,15 @@ export default function useChainHelpers() {
         chainName: "zkSync Era",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://mainnet.era.zksync.io"]
+      }] 
+    } else if (networkName == "Scroll") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://scrollscan.com/" ],
+        chainId: "0x82750",
+        chainName: "Scroll",
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: ["https://rpc.scroll.io/"]
       }] 
     }
 

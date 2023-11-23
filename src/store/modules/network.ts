@@ -15,6 +15,7 @@ export default {
       100: "Gnosis Chain",
       137: "Polygon",
       42161: "Arbitrum",
+      534352: "Scroll",
       56: "BNB Smart Chain"
     }
   }),
@@ -53,6 +54,8 @@ export default {
         return "https://testnet.arbiscan.io";
       } else if (chainId.value === 1313161555) {
         return "https://testnet.aurorascan.dev";
+      } else if (chainId.value === 534352) {
+        return "https://rpc.scroll.io/";
       }
     },
 
@@ -89,6 +92,8 @@ export default {
         return "https://testnet.arbiscan.io";
       } else if (netId === 1313161555) {
         return "https://testnet.aurorascan.dev";
+      } else if (netId === 534352) {
+        return "https://rpc.scroll.io/";
       }
     },
     
@@ -179,6 +184,11 @@ export default {
         // Aurora testnet
         urls = [
           "https://testnet.aurora.dev"
+        ];
+      }else if (networkId === 534352) {
+        // Scroll
+        urls = [
+          "https://rpc.scroll.io/"
         ];
       }
 
@@ -283,6 +293,9 @@ export default {
         state.networkCurrency = "ETH";
       } else if (chainId.value === 1313161555) {
         state.networkName = "Aurora Testnet";
+        state.networkCurrency = "ETH";
+      } else if (chainId.value === 534352) {
+        state.networkName = "Scroll";
         state.networkCurrency = "ETH";
       } else {
         state.networkName = "Unsupported Network";
