@@ -14,6 +14,7 @@ export default {
       10: "Optimism",
       100: "Gnosis Chain",
       137: "Polygon",
+      255: "Kroma",
       42161: "Arbitrum",
       534352: "Scroll",
       56: "BNB Smart Chain"
@@ -44,6 +45,8 @@ export default {
         return "https://polygonscan.com";
       } else if (chainId.value === 250) {
         return "https://ftmscan.com";
+      } else if (chainId.value === 255) {
+        return "https://blockscout.kroma.network";
       } else if (chainId.value === 4002) {
         return "https://testnet.ftmscan.com";
       } else if (chainId.value === 42161) {
@@ -55,7 +58,7 @@ export default {
       } else if (chainId.value === 1313161555) {
         return "https://testnet.aurorascan.dev";
       } else if (chainId.value === 534352) {
-        return "https://rpc.scroll.io/";
+        return "https://scrollscan.com";
       }
     },
 
@@ -82,6 +85,8 @@ export default {
         return "https://polygonscan.com";
       } else if (netId === 250) {
         return "https://ftmscan.com";
+      } else if (netId === 255) {
+        return "https://blockscout.kroma.network";
       } else if (netId === 4002) {
         return "https://testnet.ftmscan.com";
       } else if (netId === 42161) {
@@ -93,7 +98,7 @@ export default {
       } else if (netId === 1313161555) {
         return "https://testnet.aurorascan.dev";
       } else if (netId === 534352) {
-        return "https://rpc.scroll.io/";
+        return "https://scrollscan.com";
       }
     },
     
@@ -153,6 +158,11 @@ export default {
         urls = [
           "https://rpc.ankr.com/fantom"
         ];
+      } else if (networkId === 255) {
+        // Kroma Mainnet
+        urls = [
+          "https://api.kroma.network/"
+        ];
       } else if (networkId === 4002) {
         // Fantom Testnet
         urls = [
@@ -180,15 +190,15 @@ export default {
         urls = [
           "https://goerli-rollup.arbitrum.io/rpc"
         ];
+      } else if (networkId === 534352) {
+        // Scroll
+        urls = [
+          "https://rpc.scroll.io/"
+        ];
       } else if (networkId === 1313161555) {
         // Aurora testnet
         urls = [
           "https://testnet.aurora.dev"
-        ];
-      }else if (networkId === 534352) {
-        // Scroll
-        urls = [
-          "https://rpc.scroll.io/"
         ];
       }
 
@@ -270,6 +280,9 @@ export default {
       } else if (chainId.value === 250) {
         state.networkName = "Fantom";
         state.networkCurrency = "FTM";
+      } else if (chainId.value === 255) {
+        state.networkName = "Kroma";
+        state.networkCurrency = "ETH";
       } else if (chainId.value === 4002) {
         state.networkName = "Fantom Testnet";
         state.networkCurrency = "FTM";

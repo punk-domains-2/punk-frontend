@@ -23,6 +23,8 @@ export default function useChainHelpers() {
       return "Polygon";
     } else if (chainId === 250) {
       return "Fantom";
+    } else if (chainId === 255) {
+      return "Kroma";
     } else if (chainId === 324) {
       return "zkSync Era";
     } else if (chainId === 4002) {
@@ -94,6 +96,11 @@ export default function useChainHelpers() {
         // Fantom Mainnet
         urls = [
           "https://rpc.ankr.com/fantom",
+        ];
+      } else if (networkId === 255) {
+        // Kroma Mainnet
+        urls = [
+          "https://api.kroma.network/",
         ];
       } else if (networkId === 324) {
         // zkSync Era Mainnet
@@ -301,6 +308,15 @@ export default function useChainHelpers() {
         chainName: "Scroll",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://rpc.scroll.io/"]
+      }] 
+    } else if (networkName == "Kroma") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://blockscout.kroma.network/" ],
+        chainId: "0xff",
+        chainName: "Kroma",
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: ["https://api.kroma.network/"]
       }] 
     }
 
