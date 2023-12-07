@@ -31,6 +31,8 @@ export default function useChainHelpers() {
       return "Fantom Testnet";
     } else if (chainId === 42161) {
       return "Arbitrum";
+    } else if (chainId === 59144) {
+      return "Linea";
     } else if (chainId === 80001) {
       return "Polygon Testnet";
     } else if (chainId === 421611) {
@@ -118,6 +120,11 @@ export default function useChainHelpers() {
         // Arbitrum
         urls = [
           "https://rpc.ankr.com/arbitrum"
+        ];
+      } else if (networkId === 59144) {
+        // Linea
+        urls = [
+          "https://rpc.linea.build/"
         ];
       } else if (networkId === 80001) {
         // Mumbai testnet (Polygon testnet)
@@ -312,11 +319,20 @@ export default function useChainHelpers() {
     } else if (networkName == "Kroma") {
       method = "wallet_addEthereumChain"
       params = [{ 
-        blockExplorerUrls: [ "https://blockscout.kroma.network/" ],
+        blockExplorerUrls: [ "https://kromascan.com/" ],
         chainId: "0xff",
         chainName: "Kroma",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://api.kroma.network/"]
+      }] 
+    } else if (networkName == "Linea") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://lineascan.build/" ],
+        chainId: "0xe708",
+        chainName: "Linea",
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: ["https://rpc.linea.build/"]
       }] 
     }
 

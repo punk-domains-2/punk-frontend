@@ -16,6 +16,7 @@ export default {
       137: "Polygon",
       255: "Kroma",
       42161: "Arbitrum",
+      59144: "Linea",
       534352: "Scroll",
       56: "BNB Smart Chain"
     }
@@ -46,11 +47,13 @@ export default {
       } else if (chainId.value === 250) {
         return "https://ftmscan.com";
       } else if (chainId.value === 255) {
-        return "https://blockscout.kroma.network";
+        return "https://kromascan.com";
       } else if (chainId.value === 4002) {
         return "https://testnet.ftmscan.com";
       } else if (chainId.value === 42161) {
         return "https://arbiscan.io";
+      } else if (chainId.value === 59144) {
+        return "https://lineascan.build";
       } else if (chainId.value === 80001) {
         return "https://mumbai.polygonscan.com";
       } else if (chainId.value === 421611) {
@@ -86,11 +89,13 @@ export default {
       } else if (netId === 250) {
         return "https://ftmscan.com";
       } else if (netId === 255) {
-        return "https://blockscout.kroma.network";
+        return "https://kromascan.com";
       } else if (netId === 4002) {
         return "https://testnet.ftmscan.com";
       } else if (netId === 42161) {
         return "https://arbiscan.io";
+      } else if (netId === 59144) {
+        return "https://lineascan.build";
       } else if (netId === 80001) {
         return "https://mumbai.polygonscan.com";
       } else if (netId === 421611) {
@@ -174,6 +179,11 @@ export default {
         // Arbitrum
         urls = [
           "https://rpc.ankr.com/arbitrum",
+        ];
+      } else if (networkId === 59144) {
+        // Linea
+        urls = [
+          "https://rpc.linea.build/"
         ];
       } else if (networkId === 80001) {
         // Mumbai testnet (Polygon testnet)
@@ -288,6 +298,9 @@ export default {
         state.networkCurrency = "FTM";
       } else if (chainId.value === 42161) {
         state.networkName = "Arbitrum";
+        state.networkCurrency = "ETH";
+      } else if (chainId.value === 59144) {
+        state.networkName = "Linea";
         state.networkCurrency = "ETH";
       } else if (chainId.value === 421611) {
         state.networkName = "Arbitrum Testnet";
