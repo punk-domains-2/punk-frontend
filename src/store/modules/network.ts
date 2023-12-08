@@ -18,7 +18,8 @@ export default {
       42161: "Arbitrum",
       59144: "Linea",
       534352: "Scroll",
-      56: "BNB Smart Chain"
+      56: "BNB Smart Chain",
+      167007: "Taiko Testnet"
     }
   }),
 
@@ -56,6 +57,8 @@ export default {
         return "https://lineascan.build";
       } else if (chainId.value === 80001) {
         return "https://mumbai.polygonscan.com";
+      } else if (chainId.value === 167007) {
+        return "https://explorer.jolnir.taiko.xyz";
       } else if (chainId.value === 421611) {
         return "https://testnet.arbiscan.io";
       } else if (chainId.value === 1313161555) {
@@ -98,6 +101,8 @@ export default {
         return "https://lineascan.build";
       } else if (netId === 80001) {
         return "https://mumbai.polygonscan.com";
+      } else if (netId === 167007) {
+        return "https://explorer.jolnir.taiko.xyz";
       } else if (netId === 421611) {
         return "https://testnet.arbiscan.io";
       } else if (netId === 1313161555) {
@@ -189,6 +194,11 @@ export default {
         // Mumbai testnet (Polygon testnet)
         urls = [
           "https://matic-mumbai.chainstacklabs.com"
+        ]
+      } else if (networkId === 167007) {
+        // Taiko Jolnir testnet
+        urls = [
+          "https://rpc.jolnir.taiko.xyz"
         ]
       } else if (networkId === 421611) {
         // Arbitrum Rinkeby testnet
@@ -302,15 +312,18 @@ export default {
       } else if (chainId.value === 59144) {
         state.networkName = "Linea";
         state.networkCurrency = "ETH";
+      } else if (chainId.value === 80001) {
+        state.networkName = "Polygon Testnet";
+        state.networkCurrency = "MATIC";
+      } else if (chainId.value === 167007) {
+        state.networkName = "Taiko Testnet";
+        state.networkCurrency = "ETH";
       } else if (chainId.value === 421611) {
         state.networkName = "Arbitrum Testnet";
         state.networkCurrency = "ETH";
       } else if (chainId.value === 421613) {
         state.networkName = "Arbitrum Goerli Testnet";
         state.networkCurrency = "ETH";
-      } else if (chainId.value === 80001) {
-        state.networkName = "Polygon Testnet";
-        state.networkCurrency = "MATIC";
       } else if (chainId.value === 3) {
         state.networkName = "Ropsten";
         state.networkCurrency = "ETH";

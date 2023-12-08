@@ -35,6 +35,8 @@ export default function useChainHelpers() {
       return "Linea";
     } else if (chainId === 80001) {
       return "Polygon Testnet";
+    } else if (chainId === 167007) {
+      return "Taiko Testnet";
     } else if (chainId === 421611) {
       return "Arbitrum Testnet";
     } else if (chainId === 534352) {
@@ -130,6 +132,11 @@ export default function useChainHelpers() {
         // Mumbai testnet (Polygon testnet)
         urls = [
           "https://matic-mumbai.chainstacklabs.com"
+        ]
+      } else if (networkId === 167007) {
+        // Taiko Jolnir testnet
+        urls = [
+          "https://rpc.jolnir.taiko.xyz"
         ]
       } else if (networkId === 421611) {
         // Arbitrum testnet
@@ -333,6 +340,15 @@ export default function useChainHelpers() {
         chainName: "Linea",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://rpc.linea.build/"]
+      }] 
+    } else if (networkName == "Taiko Testnet") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://explorer.jolnir.taiko.xyz" ],
+        chainId: "0x28c5f",
+        chainName: "Taiko Jolnir Testnet",
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: ["https://rpc.jolnir.taiko.xyz"]
       }] 
     }
 
