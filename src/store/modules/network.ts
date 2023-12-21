@@ -16,6 +16,7 @@ export default {
       137: "Polygon",
       255: "Kroma",
       42161: "Arbitrum",
+      42766: "ZKFair",
       59144: "Linea",
       534352: "Scroll",
       56: "BNB Smart Chain",
@@ -53,6 +54,8 @@ export default {
         return "https://testnet.ftmscan.com";
       } else if (chainId.value === 42161) {
         return "https://arbiscan.io";
+      } else if (chainId.value === 42766) {
+        return "https://scan.zkfair.io";
       } else if (chainId.value === 59144) {
         return "https://lineascan.build";
       } else if (chainId.value === 80001) {
@@ -97,6 +100,8 @@ export default {
         return "https://testnet.ftmscan.com";
       } else if (netId === 42161) {
         return "https://arbiscan.io";
+      } else if (netId === 42766) {
+        return "https://scan.zkfair.io";
       } else if (netId === 59144) {
         return "https://lineascan.build";
       } else if (netId === 80001) {
@@ -184,6 +189,11 @@ export default {
         // Arbitrum
         urls = [
           "https://rpc.ankr.com/arbitrum",
+        ];
+      } else if (networkId === 42766) {
+        // ZKFair
+        urls = [
+          "https://rpc.zkfair.io",
         ];
       } else if (networkId === 59144) {
         // Linea
@@ -309,6 +319,9 @@ export default {
       } else if (chainId.value === 42161) {
         state.networkName = "Arbitrum";
         state.networkCurrency = "ETH";
+      } else if (chainId.value === 42766) {
+        state.networkName = "ZKFair";
+        state.networkCurrency = "USDC";
       } else if (chainId.value === 59144) {
         state.networkName = "Linea";
         state.networkCurrency = "ETH";

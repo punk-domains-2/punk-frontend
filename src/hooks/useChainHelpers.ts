@@ -31,6 +31,8 @@ export default function useChainHelpers() {
       return "Fantom Testnet";
     } else if (chainId === 42161) {
       return "Arbitrum";
+    } else if (chainId === 42766) {
+      return "ZKFair";
     } else if (chainId === 59144) {
       return "Linea";
     } else if (chainId === 80001) {
@@ -122,6 +124,11 @@ export default function useChainHelpers() {
         // Arbitrum
         urls = [
           "https://rpc.ankr.com/arbitrum"
+        ];
+      } else if (networkId === 42766) {
+        // zkFair
+        urls = [
+          "https://rpc.zkfair.io"
         ];
       } else if (networkId === 59144) {
         // Linea
@@ -349,6 +356,15 @@ export default function useChainHelpers() {
         chainName: "Taiko Jolnir Testnet",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://rpc.jolnir.taiko.xyz"]
+      }] 
+    } else if (networkName == "ZKFair") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://scan.zkfair.io/" ],
+        chainId: "0xa70e",
+        chainName: "ZKFair",
+        nativeCurrency: { decimals: 18, name: "USDC", symbol: "USDC" }, 
+        rpcUrls: ["https://rpc.zkfair.io"]
       }] 
     }
 
