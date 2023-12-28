@@ -14,6 +14,7 @@
             class="dropdown-item" 
             v-for="network in getSupportedNetworkNames"
             @click="changeNetwork(network)"
+            :key="network"
           >{{network}}</span>
         </li>
       </ul>
@@ -69,6 +70,13 @@
       <span v-if="waiting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       Buy domain
     </button>
+
+    <div v-if="chainId==42766">
+      <p>
+        Use your .fairchat domain as username on 
+        <a target="_blank" href="https://fairchat.xyz">Fairchat.xyz</a> - the first Web3 Social on ZKFair!
+      </p>
+    </div>
 
     <!--
     <div class="row">
