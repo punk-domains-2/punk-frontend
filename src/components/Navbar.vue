@@ -46,10 +46,6 @@
               <router-link tag="button" class="btn btn-primary" to="/buy-tld">Buy a TLD</router-link>
             </div>
             -->
-            
-            <div v-if="isActivated" class="btn-group mx-2 navbar-menu-btn">
-              <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
-            </div>
           
             <div v-if="isActivated" class="btn-group mx-2 navbar-menu-btn">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,6 +72,7 @@
                 <router-link tag="li" class="dropdown-item" to="/">Buy domain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/search-domain">Search domain</router-link>
                 <router-link tag="li" class="dropdown-item" to="/send-tokens">Send tokens</router-link>
+                <router-link tag="li" class="dropdown-item" to="/punkangel">Mint .punkangel</router-link>
                 <li class="dropdown-item" @click="openUrl('https://blog.punk.domains')">Blog</li>
                 <router-link tag="li" class="dropdown-item" to="/browser">Browser extension</router-link>
                 <li class="dropdown-item" @click="openUrl('https://docs.punk.domains')">Docs</li>
@@ -83,6 +80,11 @@
                 <li class="dropdown-item" @click="logout">Disconnect</li>
               </ul>
             </div>
+
+            <div v-if="isActivated" class="btn-group mx-2 navbar-menu-btn">
+              <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
+            </div>
+            
           </div>
 
           <button v-if="!isActivated" class="btn btn-primary" @click="open">Connect wallet</button>

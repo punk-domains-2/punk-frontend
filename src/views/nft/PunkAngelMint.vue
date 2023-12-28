@@ -16,7 +16,7 @@
     <div class="row mt-5">
       <div class="col-md-8 offset-md-2">
         <p>
-          Punk Angel is a new kind of web3 domains, which gives you both a unique domain name and also a generative art 
+          Punk Angel is a new kind of web3 domain, which gives you both a unique domain name and also a generative art 
           profile picture (all-in-one).
         </p>
       </div>
@@ -122,15 +122,15 @@
             </tr>
             <tr>
               <td>3 characters</td>
-              <td>$2999</td>
+              <td>$999</td>
             </tr>
             <tr>
               <td>4 characters</td>
-              <td>$1999</td>
+              <td>$199</td>
             </tr>
             <tr>
               <td>5+ characters</td>
-              <td>$999</td>
+              <td>$69</td>
             </tr>
           </tbody>
         </table>
@@ -144,10 +144,10 @@
         <h4 class="mt-4">What is the max/total supply?</h4>
 
         <p class="mt-3">
-          Max/total supply is between 44 and 425 domains. It depends on the prices that domains are bought at. 
-          If all domains are bought at $999, the max supply is 425 domains. If some domains are bought at a 
+          Max/total supply is between 65 and 5822 domains. It depends on the prices that domains are bought at. 
+          If all domains are bought at $69, the max supply is 5822 domains. If some domains are bought at a 
           higher price, the total supply will be lower. If all domains are bought at $9999, the total supply 
-          is capped at 44 domains.
+          is capped at 65 domains.
         </p>
 
         <h4 class="mt-5">Can I buy/sell these PFP domains on marketplaces?</h4>
@@ -230,7 +230,7 @@ export default {
   data() {
     return {
       canMint: true,
-      chosenAllowance: 999,
+      chosenAllowance: 69,
       chosenDomainName: null,
       domainPrice: null,
       idMainnet: 42161,
@@ -279,13 +279,13 @@ export default {
         } else if (this.chosenDomainName.length === 2) {
           return 4999;
         } else if (this.chosenDomainName.length === 3) {
-          return 2999;
+          return 999;
         } else if (this.chosenDomainName.length === 4) {
-          return 1999;
+          return 199;
         }
       }
 
-      return 999;
+      return 69;
     },
 
     domainLowerCase() {

@@ -9,10 +9,6 @@
     <span> | </span>
 
     <router-link to="/how">How it works</router-link>
-    
-    <span> | </span>
-
-    <router-link to="/partners/l2dao">L2DAO</router-link>
 
     <!--
     
@@ -37,6 +33,10 @@
     <span> | </span>
 
     <a target="_blank" href="https://github.com/orgs/punk-domains-2/discussions/1">Contribute</a> 
+
+    <span> | </span>
+
+    <a target="_blank" href="https://iggy.social">Iggy Social</a> 
   
   </div>
 
@@ -46,18 +46,14 @@
 
     <a class="icons" target="_blank" href="https://gitlab.com/punk-domains"><i class="bi bi-git"></i></a>
 
+    <a class="icons" target="_blank" href="https://github.com/punk-domains-2"><i class="bi bi-github"></i></a>
+
     <a class="icons" target="_blank" href="https://discord.gg/8dSrwrAQeu"><i class="bi bi-discord"></i></a>
 
     <a class="icons" target="_blank" href="https://twitter.com/PunkDomains"><i class="bi bi-twitter"></i></a>
 
     <a class="icons" href="https://blog.punk.domains" target="_blank"><i class="bi bi-pencil-square"></i></a>
     
-  </div>
-
-  <div class="container-fluid text-center">
-    <a href="https://alchemy.com/?r=DA1NzIxNDk3NDA4N" target="_blank">
-      <img id="badge-button" style="height:43px" src="https://static.alchemyapi.io/images/marketing/badge.png" alt="Alchemy Supercharged" />
-    </a>
   </div>
 </template>
 
