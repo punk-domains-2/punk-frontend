@@ -15,7 +15,11 @@
         <div class="d-flex ms-auto">
           <div class="navbar-menu-buttons">
 
-            <div class="btn-group mx-2 navbar-menu-btn navbar-other-item">
+            <div v-if="chainId==42766" class="btn-group mx-2 navbar-menu-btn">
+              <a class="btn btn-primary" href="https://fairchat.xyz" target="_blank">Try Fairchat.xyz</a>
+            </div>
+
+            <div v-if="chainId!=42766" class="btn-group mx-2 navbar-menu-btn navbar-other-item">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 Partners
               </button>
@@ -81,7 +85,7 @@
               </ul>
             </div>
 
-            <div v-if="isActivated" class="btn-group mx-2 navbar-menu-btn">
+            <div v-if="isActivated && chainId!=42766" class="btn-group mx-2 navbar-menu-btn">
               <router-link tag="button" class="btn btn-primary" to="/send-tokens">Send Tokens</router-link>
             </div>
             
@@ -141,11 +145,11 @@ export default {
   setup() {
     const { open } = useBoard();
     const { disconnect } = useWallet();
-    const { isActivated } = useEthers();
+    const { chainId, isActivated } = useEthers();
     const { switchNetwork } = useChainHelpers();
 
     return {
-      isActivated, disconnect, open, switchNetwork
+      chainId, isActivated, disconnect, open, switchNetwork
     }
   }
 }
