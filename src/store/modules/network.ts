@@ -16,6 +16,7 @@ export default {
       137: "Polygon",
       255: "Kroma",
       42161: "Arbitrum",
+      42170: "Arbitrum Nova",
       42766: "ZKFair",
       59144: "Linea",
       534352: "Scroll",
@@ -54,6 +55,8 @@ export default {
         return "https://testnet.ftmscan.com";
       } else if (chainId.value === 42161) {
         return "https://arbiscan.io";
+      } else if (chainId.value === 42170) {
+        return "https://nova.arbiscan.io";
       } else if (chainId.value === 42766) {
         return "https://scan.zkfair.io";
       } else if (chainId.value === 59144) {
@@ -100,6 +103,8 @@ export default {
         return "https://testnet.ftmscan.com";
       } else if (netId === 42161) {
         return "https://arbiscan.io";
+      } else if (netId === 42170) {
+        return "https://nova.arbiscan.io";
       } else if (netId === 42766) {
         return "https://scan.zkfair.io";
       } else if (netId === 59144) {
@@ -189,6 +194,11 @@ export default {
         // Arbitrum
         urls = [
           "https://rpc.ankr.com/arbitrum",
+        ];
+      } else if (networkId === 42170) {
+        // Arbitrum Nova
+        urls = [
+          "https://nova.arbitrum.io/rpc",
         ];
       } else if (networkId === 42766) {
         // ZKFair
@@ -318,6 +328,9 @@ export default {
         state.networkCurrency = "FTM";
       } else if (chainId.value === 42161) {
         state.networkName = "Arbitrum";
+        state.networkCurrency = "ETH";
+      } else if (chainId.value === 42170) {
+        state.networkName = "Arbitrum Nova";
         state.networkCurrency = "ETH";
       } else if (chainId.value === 42766) {
         state.networkName = "ZKFair";

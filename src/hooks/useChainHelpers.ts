@@ -31,6 +31,8 @@ export default function useChainHelpers() {
       return "Fantom Testnet";
     } else if (chainId === 42161) {
       return "Arbitrum";
+    } else if (chainId === 42170) {
+      return "Arbitrum Nova";
     } else if (chainId === 42766) {
       return "ZKFair";
     } else if (chainId === 59144) {
@@ -125,6 +127,11 @@ export default function useChainHelpers() {
         urls = [
           "https://rpc.ankr.com/arbitrum"
         ];
+      } else if (networkId === 42170) {
+        // Arbitrum Nova
+        urls = [
+          "https://nova.arbitrum.io/rpc"
+        ];
       } else if (networkId === 42766) {
         // zkFair
         urls = [
@@ -199,10 +206,19 @@ export default function useChainHelpers() {
       method = "wallet_addEthereumChain"
       params = [{ 
         blockExplorerUrls: [ "https://arbiscan.io" ],
-        chainId: "0xA4B1",
+        chainId: "0xa4b1",
         chainName: "Arbitrum One",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://rpc.ankr.com/arbitrum"]
+      }] 
+    } else if (networkName == "Arbitrum Nova") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://nova.arbiscan.io" ],
+        chainId: "0xa4ba",
+        chainName: "Arbitrum Nova",
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: ["https://nova.arbitrum.io/rpc"]
       }] 
     } else if (networkName == "Optimism") {
       method = "wallet_addEthereumChain"
