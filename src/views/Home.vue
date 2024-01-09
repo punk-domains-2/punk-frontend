@@ -78,6 +78,13 @@
       </p>
     </div>
 
+    <div v-if="chainId==167007">
+      <p>
+        Use your .testaiko domain as username on 
+        <a target="_blank" href="https://tko.chat">TKO.chat</a> - the first Web3 Social app on Taiko!
+      </p>
+    </div>
+
     <!--
     <div class="row">
       <div class="col-md-6 offset-md-3 container text-center gitcoin">

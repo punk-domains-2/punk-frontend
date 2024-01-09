@@ -19,6 +19,10 @@
               <a class="btn btn-primary" href="https://fairchat.xyz" target="_blank">Try Fairchat.xyz</a>
             </div>
 
+            <div v-if="chainId==167007" class="btn-group mx-2 navbar-menu-btn">
+              <a class="btn btn-primary" href="https://tko.chat" target="_blank">Try TKO.chat</a>
+            </div>
+
             <div v-if="chainId!=42766" class="btn-group mx-2 navbar-menu-btn navbar-other-item">
               <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
                 Partners
