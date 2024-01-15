@@ -21,7 +21,8 @@ export default {
       59144: "Linea",
       534352: "Scroll",
       56: "BNB Smart Chain",
-      167007: "Taiko Testnet"
+      167007: "Taiko Testnet",
+      3110: "SatoshiVM Testnet"
     }
   }),
 
@@ -51,6 +52,8 @@ export default {
         return "https://ftmscan.com";
       } else if (chainId.value === 255) {
         return "https://kromascan.com";
+      } else if (chainId.value === 3110) {
+        return "https://testnet.svmscan.io";
       } else if (chainId.value === 4002) {
         return "https://testnet.ftmscan.com";
       } else if (chainId.value === 42161) {
@@ -99,6 +102,8 @@ export default {
         return "https://ftmscan.com";
       } else if (netId === 255) {
         return "https://kromascan.com";
+      } else if (netId === 3110) {
+        return "https://testnet.svmscan.io";
       } else if (netId === 4002) {
         return "https://testnet.ftmscan.com";
       } else if (netId === 42161) {
@@ -182,6 +187,11 @@ export default {
         // Kroma Mainnet
         urls = [
           "https://api.kroma.network/"
+        ];
+      } else if (networkId === 3110) {
+        // SatoshiVM Testnet
+        urls = [
+          "https://testnet.svmscan.io/"
         ];
       } else if (networkId === 4002) {
         // Fantom Testnet
@@ -323,6 +333,9 @@ export default {
       } else if (chainId.value === 255) {
         state.networkName = "Kroma";
         state.networkCurrency = "ETH";
+      } else if (chainId.value === 3110) {
+        state.networkName = "SatoshiVM Testnet";
+        state.networkCurrency = "BTC";
       } else if (chainId.value === 4002) {
         state.networkName = "Fantom Testnet";
         state.networkCurrency = "FTM";

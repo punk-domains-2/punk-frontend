@@ -27,6 +27,8 @@ export default function useChainHelpers() {
       return "Kroma";
     } else if (chainId === 324) {
       return "zkSync Era";
+    } else if (chainId === 3110) {
+      return "SatoshiVM Testnet";
     } else if (chainId === 4002) {
       return "Fantom Testnet";
     } else if (chainId === 42161) {
@@ -114,6 +116,11 @@ export default function useChainHelpers() {
         // zkSync Era Mainnet
         urls = [
           "https://mainnet.era.zksync.io",
+        ];
+      } else if (networkId === 3110) {
+        // SatoshiVM Testnet
+        urls = [
+          "https://test-rpc-node-http.svmscan.io/",
         ];
       } else if (networkId === 4002) {
         // Fantom Testnet
@@ -381,6 +388,15 @@ export default function useChainHelpers() {
         chainName: "ZKFair",
         nativeCurrency: { decimals: 18, name: "USDC", symbol: "USDC" }, 
         rpcUrls: ["https://rpc.zkfair.io"]
+      }] 
+    } else if (networkName == "SatoshiVM Testnet") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://testnet.svmscan.io/" ],
+        chainId: "0xc26",
+        chainName: "SatoshiVM Testnet",
+        nativeCurrency: { decimals: 18, name: "BTC", symbol: "BTC" }, 
+        rpcUrls: ["https://test-rpc-node-http.svmscan.io/"]
       }] 
     }
 
