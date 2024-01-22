@@ -78,9 +78,9 @@
       </p>
     </div>
 
-    <div v-if="chainId==167007">
+    <div v-if="chainId==167008">
       <p>
-        Use your .testaiko domain as username on 
+        Use your .ktaiko domain as username on 
         <a target="_blank" href="https://tko.chat">TKO.chat</a> - the first Web3 Social app on Taiko!
       </p>
     </div>

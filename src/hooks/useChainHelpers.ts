@@ -42,7 +42,9 @@ export default function useChainHelpers() {
     } else if (chainId === 80001) {
       return "Polygon Testnet";
     } else if (chainId === 167007) {
-      return "Taiko Testnet";
+      return "Taiko Jolnir Testnet";
+    } else if (chainId === 167008) {
+      return "Taiko Katla Testnet";
     } else if (chainId === 421611) {
       return "Arbitrum Testnet";
     } else if (chainId === 534352) {
@@ -158,6 +160,11 @@ export default function useChainHelpers() {
         // Taiko Jolnir testnet
         urls = [
           "https://rpc.jolnir.taiko.xyz"
+        ]
+      } else if (networkId === 167008) {
+        // Taiko Katla testnet
+        urls = [
+          "https://rpc.katla.taiko.xyz"
         ]
       } else if (networkId === 421611) {
         // Arbitrum testnet
@@ -371,7 +378,7 @@ export default function useChainHelpers() {
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://rpc.linea.build/"]
       }] 
-    } else if (networkName == "Taiko Testnet") {
+    } else if (networkName == "Taiko Jolnir Testnet") {
       method = "wallet_addEthereumChain"
       params = [{ 
         blockExplorerUrls: [ "https://explorer.jolnir.taiko.xyz" ],
@@ -379,6 +386,15 @@ export default function useChainHelpers() {
         chainName: "Taiko Jolnir Testnet",
         nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
         rpcUrls: ["https://rpc.jolnir.taiko.xyz"]
+      }] 
+    } else if (networkName == "Taiko Katla Testnet") {
+      method = "wallet_addEthereumChain"
+      params = [{ 
+        blockExplorerUrls: [ "https://explorer.katla.taiko.xyz" ],
+        chainId: "0x28c60",
+        chainName: "Taiko Katla Testnet",
+        nativeCurrency: { decimals: 18, name: "ETH", symbol: "ETH" }, 
+        rpcUrls: ["https://rpc.katla.taiko.xyz"]
       }] 
     } else if (networkName == "ZKFair") {
       method = "wallet_addEthereumChain"
