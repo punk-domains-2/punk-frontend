@@ -176,12 +176,7 @@ export default {
     },
 
     changeNetwork(networkName) {
-      const networkData = this.switchNetwork(networkName); 
-
-      window.ethereum.request({ 
-        method: networkData.method, 
-        params: networkData.params
-      });
+      this.switchOrAddChain(window.ethereum, networkName); 
     }
   },
 
@@ -190,9 +185,9 @@ export default {
     const { address, chainId, isActivated, signer } = useEthers();
     const toast = useToast();
     const { buyNotValidFlexi } = useDomainHelpers();
-    const { switchNetwork } = useChainHelpers();
+    const { switchOrAddChain } = useChainHelpers();
 
-    return { address, buyNotValidFlexi, chainId, isActivated, open, signer, switchNetwork, toast }
+    return { address, buyNotValidFlexi, chainId, isActivated, open, signer, switchOrAddChain, toast }
   }
 }
 </script>

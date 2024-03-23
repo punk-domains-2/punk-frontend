@@ -234,12 +234,7 @@ export default {
     },
 
     changeNetwork(networkName) {
-      const networkData = this.switchNetwork(networkName); 
-
-      window.ethereum.request({ 
-        method: networkData.method, 
-        params: networkData.params
-      });
+      this.switchOrAddChain(window.ethereum, networkName); 
     },
 
     changeTld(tldName) {
@@ -298,9 +293,9 @@ export default {
     const { address, chainId, isActivated, signer } = useEthers()
     const toast = useToast();
     const { buyNotValid } = useDomainHelpers();
-    const { switchNetwork } = useChainHelpers();
+    const { switchOrAddChain } = useChainHelpers();
 
-    return { address, buyNotValid, chainId, isActivated, displayEther, open, signer, switchNetwork, toast }
+    return { address, buyNotValid, chainId, isActivated, displayEther, open, signer, switchOrAddChain, toast }
   },
 
   watch: {

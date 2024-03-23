@@ -127,12 +127,7 @@ export default {
 
   methods: {
     changeNetwork(networkName) {
-      const networkData = this.switchNetwork(networkName); 
-
-      window.ethereum.request({ 
-        method: networkData.method, 
-        params: networkData.params
-      });
+      const networkData = this.switchOrAddChain(window.ethereum, networkName); 
     },
 
     logout() {
@@ -150,10 +145,10 @@ export default {
     const { open } = useBoard();
     const { disconnect } = useWallet();
     const { chainId, isActivated } = useEthers();
-    const { switchNetwork } = useChainHelpers();
+    const { switchOrAddChain } = useChainHelpers();
 
     return {
-      chainId, isActivated, disconnect, open, switchNetwork
+      chainId, isActivated, disconnect, open, switchOrAddChain
     }
   }
 }
