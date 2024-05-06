@@ -178,7 +178,7 @@ export default {
 
         const checkDomainHolder = await contract.getDomainHolder(existingDomainParts[0]);
 
-        if (String(checkDomainHolder)===String(this.address)) {
+        if (String(checkDomainHolder).toLowerCase() === String(this.address).toLowerCase()) {
           this.addDomainManually(existingDomainLower);
           this.toast("Domain successfully added.", {type: TYPE.SUCCESS});
         } else {
