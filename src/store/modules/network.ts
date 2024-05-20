@@ -21,8 +21,7 @@ export default {
       59144: "Linea",
       534352: "Scroll",
       56: "BNB Smart Chain",
-      167007: "Taiko Jolnir Testnet",
-      167008: "Taiko Katla Testnet",
+      167009: "Taiko Hekla Testnet",
       3110: "SatoshiVM Testnet"
     }
   }),
@@ -69,8 +68,8 @@ export default {
         return "https://mumbai.polygonscan.com";
       } else if (chainId.value === 167007) {
         return "https://explorer.jolnir.taiko.xyz";
-      } else if (chainId.value === 167008) {
-        return "https://explorer.katla.taiko.xyz";
+      } else if (chainId.value === 167009) {
+        return "https://blockscoutapi.hekla.taiko.xyz";
       } else if (chainId.value === 421611) {
         return "https://testnet.arbiscan.io";
       } else if (chainId.value === 1313161555) {
@@ -121,8 +120,8 @@ export default {
         return "https://mumbai.polygonscan.com";
       } else if (netId === 167007) {
         return "https://explorer.jolnir.taiko.xyz";
-      } else if (netId === 167008) {
-        return "https://explorer.katla.taiko.xyz";
+      } else if (netId === 167009) {
+        return "https://blockscoutapi.hekla.taiko.xyz";
       } else if (netId === 421611) {
         return "https://testnet.arbiscan.io";
       } else if (netId === 1313161555) {
@@ -239,6 +238,11 @@ export default {
         // Taiko Katla testnet
         urls = [
           "https://rpc.katla.taiko.xyz"
+        ]
+      } else if (networkId === 167009) {
+        // Taiko Hekla testnet
+        urls = [
+          "https://rpc.hekla.taiko.xyz"
         ]
       } else if (networkId === 421611) {
         // Arbitrum Rinkeby testnet
@@ -369,6 +373,9 @@ export default {
         state.networkCurrency = "ETH";
       } else if (chainId.value === 167008) {
         state.networkName = "Taiko Katla Testnet";
+        state.networkCurrency = "ETH";
+      } else if (chainId.value === 167009) {
+        state.networkName = "Taiko Hekla Testnet";
         state.networkCurrency = "ETH";
       } else if (chainId.value === 421611) {
         state.networkName = "Arbitrum Testnet";

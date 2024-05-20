@@ -19,7 +19,7 @@
               <a class="btn btn-primary" href="https://fairchat.xyz" target="_blank">Try Fairchat.xyz</a>
             </div>
 
-            <div v-if="chainId==167008" class="btn-group mx-2 navbar-menu-btn">
+            <div v-if="chainId==167009" class="btn-group mx-2 navbar-menu-btn">
               <a class="btn btn-primary" href="https://tko.chat" target="_blank">Try TKO.chat</a>
             </div>
 
@@ -29,6 +29,7 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
                 
+                <li class="dropdown-item" @click="openUrl('https://degenname.lol')">Degen Names (.degen) <i class="bi bi-box-arrow-up-right"></i></li>
                 <li class="dropdown-item" @click="openUrl('https://dns.dopewars.gg')">Dope Name Service (.dope) <i class="bi bi-box-arrow-up-right"></i></li>
                 <li class="dropdown-item" @click="openUrl('https://id.zkchat.net')">zkSoul ID (.zksoul) <i class="bi bi-box-arrow-up-right"></i></li>
                 <li class="dropdown-item" @click="openUrl('https://optimistic.domains')">Optimistic Domains (.op) <i class="bi bi-box-arrow-up-right"></i></li>

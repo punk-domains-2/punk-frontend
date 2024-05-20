@@ -95,5 +95,6 @@ const chains = [
   { chainId: 81457, name: "Blast", currency: "ETH", rpc1: "https://rpc.blast.io", rpc2: "https://rpc.ankr.com/blast", blockExplorer: "https://blastscan.io"},
   { chainId: 167007, name: "Taiko Jolnir Testnet", currency: "ETH", rpc1: "https://rpc.jolnir.taiko.xyz", rpc2: "https://rpc.jolnir.taiko.xyz", blockExplorer: "https://explorer.jolnir.taiko.xyz"},
   { chainId: 167008, name: "Taiko Katla Testnet", currency: "ETH", rpc1: "https://rpc.katla.taiko.xyz", rpc2: "https://rpc.katla.taiko.xyz", blockExplorer: "https://explorer.katla.taiko.xyz"},
+  { chainId: 167009, name: "Taiko Hekla Testnet", currency: "ETH", rpc1: "https://rpc.hekla.taiko.xyz", rpc2: "https://rpc.hekla.taiko.xyz", blockExplorer: "https://blockscoutapi.hekla.taiko.xyz"},
   { chainId: 534352, name: "Scroll", currency: "ETH", rpc1: "https://rpc.scroll.io", rpc2: "https://1rpc.io/scroll", blockExplorer: "https://scrollscan.com"},
 ];

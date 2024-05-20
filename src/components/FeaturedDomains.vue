@@ -15,10 +15,10 @@
       </div>
 
       <div class="col-md-2 mb-3">
-        <a target="_blank" href="https://id.zkchat.net">
+        <a target="_blank" href="https://degenname.lol/">
           <div class="container text-center">
             <p class="text-break mt-3">
-              .zksoul
+              .degen
             </p>
           </div>
         </a>

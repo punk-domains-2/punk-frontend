@@ -41,6 +41,7 @@
 
         <ul class="dropdown-menu dropdown-menu-end">
           <li><span class="dropdown-item" :key="tld" v-for="tld in enabledBuyingTlds" @click="changeTld(tld)">{{tld}}</span></li>
+          <li><span class="dropdown-item" @click="openUrl('https://degenname.lol')">.degen <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://optimistic.domains')">.op <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://id.zkchat.net')">.zksoul <i class="bi bi-box-arrow-up-right" /></span></li>
           <li><span class="dropdown-item" @click="openUrl('https://fantomname.org')">.fantom <i class="bi bi-box-arrow-up-right" /></span></li>
@@ -78,9 +79,9 @@
       </p>
     </div>
 
-    <div v-if="chainId==167008">
+    <div v-if="chainId==167009">
       <p>
-        Use your .ktaiko domain as username on 
+        Use your .hekla domain as username on 
         <a target="_blank" href="https://tko.chat">TKO.chat</a> - the first Web3 Social app on Taiko!
       </p>
     </div>
