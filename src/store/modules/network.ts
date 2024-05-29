@@ -21,7 +21,7 @@ export default {
       59144: "Linea",
       534352: "Scroll",
       56: "BNB Smart Chain",
-      167009: "Taiko Hekla Testnet",
+      167000: "Taiko",
       3110: "SatoshiVM Testnet"
     }
   }),
@@ -66,6 +66,8 @@ export default {
         return "https://lineascan.build";
       } else if (chainId.value === 80001) {
         return "https://mumbai.polygonscan.com";
+      } else if (chainId.value === 167000) {
+        return "https://taikoscan.network";
       } else if (chainId.value === 167007) {
         return "https://explorer.jolnir.taiko.xyz";
       } else if (chainId.value === 167009) {
@@ -118,6 +120,8 @@ export default {
         return "https://lineascan.build";
       } else if (netId === 80001) {
         return "https://mumbai.polygonscan.com";
+      } else if (netId === 167000) {
+        return "https://taikoscan.network";
       } else if (netId === 167007) {
         return "https://explorer.jolnir.taiko.xyz";
       } else if (netId === 167009) {
@@ -228,6 +232,11 @@ export default {
         // Mumbai testnet (Polygon testnet)
         urls = [
           "https://matic-mumbai.chainstacklabs.com"
+        ]
+      } else if (networkId === 167000) {
+        // Taiko mainnet
+        urls = [
+          "https://rpc.taiko.xyz"
         ]
       } else if (networkId === 167007) {
         // Taiko Jolnir testnet
@@ -368,6 +377,9 @@ export default {
       } else if (chainId.value === 80001) {
         state.networkName = "Polygon Testnet";
         state.networkCurrency = "MATIC";
+      } else if (chainId.value === 167000) {
+        state.networkName = "Taiko";
+        state.networkCurrency = "ETH";
       } else if (chainId.value === 167007) {
         state.networkName = "Taiko Jolnir Testnet";
         state.networkCurrency = "ETH";

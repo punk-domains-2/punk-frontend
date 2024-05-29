@@ -24,7 +24,22 @@
       <button class="btn btn-primary" @click="open">Connect wallet</button>
     </div>
 
-    <div class="d-flex justify-content-center domain-input-container">
+    <div v-if="chainId==167000" class="mt-4 mb-5">
+      <h2>
+        Mint a special Taiko Drum (.🥁) domain on
+        <a target="_blank" href="https://drum.name">drum.name</a> website!
+      </h2>
+
+      <p class="text-center mt-5 mb-4">
+        <a 
+          class="btn btn-primary btn-lg"
+          target="_blank"
+          href="https://drum.name" 
+        >Mint .🥁 name!</a>
+      </p>
+    </div>
+
+    <div class="d-flex justify-content-center domain-input-container" v-if="chainId!==167000">
       <div class="input-group mb-3 domain-input input-group-lg">
         <input
           v-model="chosenDomainName" 
@@ -63,11 +78,11 @@
       </small>
     </p>
 
-    <p class="mt-3">
+    <p class="mt-3" v-if="chainId!==167000">
       Domain price: {{this.parseValue(this.selectedPrice)}} {{getNetworkCurrency}}
     </p>
 
-    <button class="btn btn-primary btn-lg mt-1 buy-button" @click="buyDomain" :disabled="waiting || buyNotValid(chosenDomainName).invalid">
+    <button v-if="chainId!==167000" class="btn btn-primary btn-lg mt-1 buy-button" @click="buyDomain" :disabled="waiting || buyNotValid(chosenDomainName).invalid">
       <span v-if="waiting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
       Buy domain
     </button>
@@ -76,13 +91,6 @@
       <p>
         Use your .fairchat domain as username on 
         <a target="_blank" href="https://fairchat.xyz">Fairchat.xyz</a> - the first Web3 Social on ZKFair!
-      </p>
-    </div>
-
-    <div v-if="chainId==167009">
-      <p>
-        Use your .hekla domain as username on 
-        <a target="_blank" href="https://tko.chat">TKO.chat</a> - the first Web3 Social app on Taiko!
       </p>
     </div>
 

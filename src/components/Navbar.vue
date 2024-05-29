@@ -19,7 +19,7 @@
               <a class="btn btn-primary" href="https://fairchat.xyz" target="_blank">Try Fairchat.xyz</a>
             </div>
 
-            <div v-if="chainId==167009" class="btn-group mx-2 navbar-menu-btn">
+            <div v-if="chainId==167000" class="btn-group mx-2 navbar-menu-btn">
               <a class="btn btn-primary" href="https://tko.chat" target="_blank">Try TKO.chat</a>
             </div>
 

@@ -93,6 +93,7 @@ const chains = [
   { chainId: 59144, name: "Linea", currency: "ETH", rpc1: "https://rpc.linea.build", rpc2: "https://rpc.linea.build", blockExplorer: "https://lineascan.build"},
   { chainId: 80001, name: "Polygon Testnet Mumbai", currency: "MATIC", rpc1: "https://rpc-mumbai.maticvigil.com", rpc2: "https://polygon-mumbai-bor.publicnode.com", blockExplorer: "https://mumbai.polygonscan.com"},
   { chainId: 81457, name: "Blast", currency: "ETH", rpc1: "https://rpc.blast.io", rpc2: "https://rpc.ankr.com/blast", blockExplorer: "https://blastscan.io"},
+  { chainId: 167000, name: "Taiko", currency: "ETH", rpc1: "https://rpc.taiko.xyz", rpc2: "https://rpc.taiko.xyz", blockExplorer: "https://taikoscan.network"},
   { chainId: 167007, name: "Taiko Jolnir Testnet", currency: "ETH", rpc1: "https://rpc.jolnir.taiko.xyz", rpc2: "https://rpc.jolnir.taiko.xyz", blockExplorer: "https://explorer.jolnir.taiko.xyz"},
   { chainId: 167008, name: "Taiko Katla Testnet", currency: "ETH", rpc1: "https://rpc.katla.taiko.xyz", rpc2: "https://rpc.katla.taiko.xyz", blockExplorer: "https://explorer.katla.taiko.xyz"},
   { chainId: 167009, name: "Taiko Hekla Testnet", currency: "ETH", rpc1: "https://rpc.hekla.taiko.xyz", rpc2: "https://rpc.hekla.taiko.xyz", blockExplorer: "https://blockscoutapi.hekla.taiko.xyz"},
