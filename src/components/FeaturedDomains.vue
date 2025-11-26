@@ -5,13 +5,13 @@
     <div class="row mt-4">
 
       <div class="col-md-2 mb-3">
-        <a target="_blank" href="https://smol.domains">
+        <span>
           <div class="container text-center">
             <p class="text-break mt-3">
-              .smol
+              .optimism
             </p>
           </div>
-        </a>
+        </span>
       </div>
 
       <div class="col-md-2 mb-3">
@@ -25,10 +25,10 @@
       </div>
 
       <div class="col-md-2 mb-3">
-        <a target="_blank" href="https://names.pooly.me">
+        <a target="_blank" href="https://meow.domains">
           <div class="container text-center">
             <p class="text-break mt-3">
-              .pool
+              .meow
             </p>
           </div>
         </a>
@@ -65,13 +65,13 @@
       </div>
 
       <div class="col-md-2 mb-3">
-        <router-link tag="a" to="/">
+        <span>
           <div class="container text-center">
             <p class="text-break mt-3">
               .arbi
             </p>
           </div>
-        </router-link>
+        </span>
       </div>
 
       <div class="col-md-2 mb-3">
@@ -95,33 +95,33 @@
       </div>
 
       <div class="col-md-2 mb-3">
-        <a target="_blank" href="https://ppl.domains">
+        <span>
           <div class="container text-center">
             <p class="text-break mt-3">
-              .ppl
+              .arbitrum
             </p>
           </div>
-        </a>
+        </span>
       </div>
 
       <div class="col-md-2 mb-3">
-        <a target="_blank" href="https://www.kns.earth">
+        <span>
           <div class="container text-center">
             <p class="text-break mt-3">
-              .klima
+              .l2
             </p>
           </div>
-        </a>
+        </span>
       </div>
 
       <div class="col-md-2 mb-3">
-        <a target="_blank" href="https://dns.dopewars.gg">
+        <span>
           <div class="container text-center">
             <p class="text-break mt-3">
-              .dope
+              .wagmi
             </p>
           </div>
-        </a>
+        </span>
       </div>
 
     </div>

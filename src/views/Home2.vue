@@ -24,22 +24,7 @@
       <button class="btn btn-primary" @click="open">Connect wallet</button>
     </div>
 
-    <div v-if="chainId==167000" class="mt-4 mb-5">
-      <h2>
-        Mint a special Taiko Drum (.🥁) domain on
-        <a target="_blank" href="https://drum.name">drum.name</a> website!
-      </h2>
-
-      <p class="text-center mt-5 mb-4">
-        <a 
-          class="btn btn-primary btn-lg"
-          target="_blank"
-          href="https://drum.name" 
-        >Mint .🥁 name!</a>
-      </p>
-    </div>
-
-    <div class="d-flex justify-content-center domain-input-container" v-if="chainId!==167000">
+    <div class="d-flex justify-content-center domain-input-container">
       <div class="input-group mb-3 domain-input input-group-lg">
         <input
           v-model="chosenDomainName" 
@@ -50,59 +35,80 @@
         >
         
         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <span v-if="isActivated && !selectedTld" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-          {{selectedTld}}
+          {{selectedDomain ? selectedDomain.tld : 'Select domain'}}
         </button>
 
-        <ul class="dropdown-menu dropdown-menu-end">
-          <li><span class="dropdown-item" :key="tld" v-for="tld in enabledBuyingTlds" @click="changeTld(tld)">{{tld}}</span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://degenname.lol')">.degen <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://optimistic.domains')">.op <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://id.zkchat.net')">.zksoul <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://fantomname.org')">.fantom <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://names.pooly.me')">.pool <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://www.kns.earth')">.klima <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://flr.domains')">.flr <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://songbird.domains')">.sgb <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://giveth.punk.domains')">.giveth <i class="bi bi-box-arrow-up-right" /></span></li>
-          <li><span class="dropdown-item" @click="openUrl('https://dns.dopewars.gg')">.dope <i class="bi bi-box-arrow-up-right" /></span></li>
+        <ul class="dropdown-menu dropdown-menu-end domain-dropdown">
+          <li class="px-3 py-2">
+            <input
+              v-model="domainSearchQuery"
+              type="text"
+              class="form-control form-control-sm"
+              placeholder="Search domains..."
+              @click.stop
+            />
+          </li>
+          <li><hr class="dropdown-divider"></li>
+          <li v-for="domain in filteredDomains" :key="domain.tld">
+            <a
+              v-if="domain.website && domain.website.trim() !== ''"
+              :href="domain.website"
+              target="_blank"
+              class="dropdown-item"
+              @click.stop
+            >
+              {{domain.tld}} <i class="bi bi-box-arrow-up-right" />
+            </a>
+            <span
+              v-else
+              class="dropdown-item"
+              @click="selectDomain(domain)"
+            >
+              {{domain.tld}}
+            </span>
+          </li>
         </ul>
       </div>
     </div>
 
-    <p class="error" v-if="buyNotValid(chosenDomainName).invalid">
+    <p class="error" v-if="selectedDomain && domainValidation.invalid">
       <small>
-        <em>{{ buyNotValid(chosenDomainName).message }}</em>
+        <em>{{ domainValidation.message }}</em>
       </small>
     </p>
 
-    <p class="mt-3" v-if="chainId!==167000">
+    <p class="mt-3" v-if="selectedDomain && !selectedDomain.website && isActivated && isCorrectChain">
       Domain price: {{parseValue(selectedPrice)}} {{getNetworkCurrency}}
     </p>
 
-    <button v-if="chainId!==167000" class="btn btn-primary btn-lg mt-1 buy-button" @click="buyDomain" :disabled="waiting || buyNotValid(chosenDomainName).invalid">
-      <span v-if="waiting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-      Buy domain
-    </button>
-
-    <div v-if="chainId==42766">
-      <p>
-        Use your .fairchat domain as username on 
-        <a target="_blank" href="https://fairchat.xyz">Fairchat.xyz</a> - the first Web3 Social on ZKFair!
-      </p>
+    <!-- Button states based on connection and chain -->
+    <div v-if="selectedDomain && (!selectedDomain.website || selectedDomain.website.trim() === '')">
+      <button
+        v-if="!isActivated"
+        class="btn btn-primary btn-lg mt-1 buy-button"
+        @click="open"
+      >
+        Connect Wallet
+      </button>
+      
+      <button
+        v-else-if="!isCorrectChain"
+        class="btn btn-primary btn-lg mt-1 buy-button"
+        @click="switchToDomainChain"
+      >
+        Switch to {{selectedDomain.chainName}}
+      </button>
+      
+      <button
+        v-else
+        class="btn btn-primary btn-lg mt-1 buy-button"
+        @click="buyDomain"
+        :disabled="waiting || domainValidation.invalid"
+      >
+        <span v-if="waiting" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Buy domain
+      </button>
     </div>
-
-    <!--
-    <div class="row">
-      <div class="col-md-6 offset-md-3 container text-center gitcoin">
-        <h3 class="mt-2">Support us on Gitcoin Grants!</h3>
-        <p>
-          Every $1 donation is matched with additional funds from Gitcoin, so your donation has a big impact. 
-          <a target="_blank" href="https://gitcoin.co/grants/4830/punk-domains">Donate to Punk Domains here!</a> 
-        </p>
-      </div>
-    </div>
-    -->
 
   </div>
 
@@ -119,9 +125,10 @@ import WaitingToast from "../components/toasts/WaitingToast.vue";
 import useDomainHelpers from "../hooks/useDomainHelpers";
 import useChainHelpers from "../hooks/useChainHelpers";
 import FeaturedDomains from '../components/FeaturedDomains.vue';
+import domainsData from '../data/domains.json';
 
 export default {
-  name: "Home",
+  name: "Home2",
 
   components: {
     FeaturedDomains,
@@ -130,17 +137,23 @@ export default {
   data() {
     return {
       chosenDomainName: null,
-      enabledBuyingTlds: [],
-      selectedTld: null,
+      selectedDomain: null,
       selectedPrice: null,
       waiting: false, // waiting for TX to complete
+      domainSearchQuery: '',
+      allDomains: [],
     }
   },
 
   created() {
-    if (this.getDomainPrices) {
-      this.checkEnabledBuying();
-    }
+    // Filter domains where show: true
+    this.allDomains = Object.entries(domainsData)
+      .filter(([tld, data]: [string, any]) => data.show === true)
+      .map(([tld, data]: [string, any]) => ({
+        tld,
+        ...data
+      }))
+      .sort((a, b) => a.tld.localeCompare(b.tld));
   },
 
   computed: {
@@ -148,7 +161,30 @@ export default {
     ...mapGetters("punk", ["getTlds", "getTldAddresses", "getDomainPrices", "getTldAbi"]),
 
     domainLowerCase() {
-      return this.chosenDomainName.toLowerCase();
+      return this.chosenDomainName ? this.chosenDomainName.toLowerCase() : '';
+    },
+
+    filteredDomains() {
+      if (!this.domainSearchQuery) {
+        return this.allDomains;
+      }
+      const query = this.domainSearchQuery.toLowerCase();
+      return this.allDomains.filter(domain => 
+        domain.tld.toLowerCase().includes(query) ||
+        domain.chainName.toLowerCase().includes(query)
+      );
+    },
+
+    isCorrectChain() {
+      if (!this.selectedDomain || !this.chainId) {
+        return false;
+      }
+      return this.chainId === this.selectedDomain.chainId;
+    },
+
+    domainValidation() {
+      const validation = this.buyNotValid(this.chosenDomainName);
+      return validation || { invalid: false, message: null };
     }
   },
 
@@ -157,12 +193,14 @@ export default {
     ...mapMutations("user", ["addDomainManually"]),
 
     async buyDomain() {
+      if (!this.selectedDomain) return;
+      
       this.waiting = true;
-      const fullDomainName = this.domainLowerCase + this.selectedTld;
+      const fullDomainName = this.domainLowerCase + this.selectedDomain.tld;
 
       // create TLD contract object
       const intfc = new ethers.utils.Interface(this.getTldAbi);
-      const contract = new ethers.Contract(this.getTldAddresses[this.selectedTld], intfc, this.signer);
+      const contract = new ethers.Contract(this.selectedDomain.address, intfc, this.signer);
 
       // check if price is missing
       if (!this.selectedPrice) {
@@ -241,51 +279,44 @@ export default {
     },
 
     changeNetwork(networkName) {
-      this.switchOrAddChain(window.ethereum, networkName); 
+      this.switchOrAddChain((window as any).ethereum, networkName); 
     },
 
-    changeTld(tldName) {
-      this.selectedTld = tldName;
-      this.selectedPrice = this.getDomainPrices[tldName];
-    },
-
-    async checkEnabledBuying() {
-      const oldSelectedTld = this.selectedTld;
-
-      this.enabledBuyingTlds = [];
-
-      let counter = 0;
-
-      if (this.getTlds) {
-        for (let tld of this.getTlds) {
-          // construct contract
-          const intfc = new ethers.utils.Interface(this.getTldAbi);
-          const tldContract = new ethers.Contract(this.getTldAddresses[tld], intfc, this.signer);
-
-          const canBuy = await tldContract.buyingEnabled();
-
-          if (canBuy) {
-            this.enabledBuyingTlds.push(tld);
-
-            if (counter === 0) {
-              this.selectedTld = tld;
-              counter++;
-            } else if (tld === oldSelectedTld) {
-              this.selectedTld = oldSelectedTld;
-            }
-          }
-        }
+    async fetchPrice() {
+      if (!this.selectedDomain || !this.signer) return;
+      
+      try {
+        console.log("fetching price for", this.selectedDomain.tld);
+        const intfc = new ethers.utils.Interface(this.getTldAbi);
+        const contract = new ethers.Contract(this.selectedDomain.address, intfc, this.signer);
+        this.selectedPrice = await contract.price();
+        console.log("price", this.selectedPrice);
+      } catch (e) {
+        console.error("Error fetching price:", e);
+        this.toast("Failed to fetch domain price. Please try again.", {type: TYPE.ERROR});
       }
-
-      if (this.enabledBuyingTlds && !this.selectedTld) {
-        this.selectedTld = this.enabledBuyingTlds[0];
-      }
-
-      this.selectedPrice = this.getDomainPrices[this.selectedTld];
     },
 
-    openUrl(url) {
-      window.open(url, '_blank').focus();
+    async selectDomain(domain) {
+      this.selectedDomain = domain;
+      this.selectedPrice = this.getDomainPrices ? this.getDomainPrices[domain.tld] : null;
+      
+      // If already on the correct chain and connected, fetch the price
+      if (this.isActivated && this.chainId === domain.chainId && this.signer) {
+        await this.fetchPrice();
+      }
+    },
+
+    async switchToDomainChain() {
+      if (!this.selectedDomain) return;
+      
+      try {
+        // Switch chain - the chainId watcher will automatically fetch the price when the chain switches
+        await this.switchOrAddChain((window as any).ethereum, this.selectedDomain.chainName);
+      } catch (e) {
+        console.error("Error switching chain:", e);
+        this.toast("Failed to switch chain. Please try again.", {type: TYPE.ERROR});
+      }
     },
 
     parseValue(someVal) {
@@ -306,21 +337,20 @@ export default {
   },
 
   watch: {
-    chainId(newVal, oldVal) {
-      if (newVal != oldVal) {
-        this.selectedTld = null;
-      }
-    },
-
-    getTlds(newVal, oldVal) {
-      if (newVal && this.getDomainPrices) {
-        this.checkEnabledBuying();
+    async chainId(newVal, oldVal) {
+      if (newVal != oldVal && this.selectedDomain) {
+        // If we're now on the correct chain for the selected domain, fetch the price
+        if (this.selectedDomain.chainId === newVal && this.isActivated) {
+          // Wait a bit for the signer to update
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          await this.fetchPrice();
+        }
       }
     },
 
     getDomainPrices(newVal, oldVal) {
-      if (newVal) {
-        this.checkEnabledBuying();
+      if (newVal && this.selectedDomain) {
+        this.selectedPrice = this.getDomainPrices[this.selectedDomain.tld];
       }
     }
   }
@@ -344,9 +374,19 @@ export default {
   cursor: pointer;
 }
 
+.domain-dropdown {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.error {
+  color: #dc3545;
+}
+
 @media only screen and (max-width: 767px) {
   .domain-input {
     width: 100%;
   }
 }
 </style>
+

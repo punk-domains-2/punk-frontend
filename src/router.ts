@@ -8,6 +8,7 @@ import DeprecatePolygon from './views/deprecate/DeprecatePolygon.vue'
 
 import DomainDetails from './views/DomainDetails.vue'
 import Home from './views/Home.vue'
+import Home2 from './views/Home2.vue'
 import HowItWorks from './views/HowItWorks.vue'
 
 import L2Dao from './views/partners/L2Dao.vue'
@@ -33,7 +34,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: Home2,
   },
   {
     path: '/about',

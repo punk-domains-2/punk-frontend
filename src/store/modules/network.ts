@@ -14,15 +14,10 @@ export default {
       10: "Optimism",
       100: "Gnosis Chain",
       137: "Polygon",
-      255: "Kroma",
       42161: "Arbitrum",
       42170: "Arbitrum Nova",
-      42766: "ZKFair",
       59144: "Linea",
-      534352: "Scroll",
       56: "BNB Smart Chain",
-      167000: "Taiko",
-      3110: "SatoshiVM Testnet"
     }
   }),
 
@@ -164,7 +159,7 @@ export default {
       } else if (networkId === 56) {
         // BSC mainnet
         urls = [
-          "https://rpc.ankr.com/bsc"
+          "https://bsc.drpc.org"
         ];
       } else if (networkId === 69) {
         // Optimism testnet
@@ -179,101 +174,34 @@ export default {
       } else if (networkId === 100) {
         // Gnosis Chain
         urls = [
-          "https://rpc.ankr.com/gnosis"
+          "https://rpc.gnosischain.com"
         ];
       } else if (networkId === 137) {
         // Polygon PoS Chain
         urls = [
-          "https://rpc.ankr.com/polygon", 
+          "https://polygon-rpc.com", 
         ];
       } else if (networkId === 250) {
         // Fantom Mainnet
         urls = [
-          "https://rpc.ankr.com/fantom"
-        ];
-      } else if (networkId === 255) {
-        // Kroma Mainnet
-        urls = [
-          "https://api.kroma.network/"
-        ];
-      } else if (networkId === 3110) {
-        // SatoshiVM Testnet
-        urls = [
-          "https://testnet.svmscan.io/"
-        ];
-      } else if (networkId === 4002) {
-        // Fantom Testnet
-        urls = [
-          "https://rpc.ankr.com/fantom_testnet",
-          //"https://rpc.testnet.fantom.network",
-          "https://fantom-testnet.public.blastapi.io"
+          "https://rpc3.fantom.network"
         ];
       } else if (networkId === 42161) {
         // Arbitrum
         urls = [
-          "https://rpc.ankr.com/arbitrum",
+          "https://arb1.arbitrum.io/rpc",
         ];
       } else if (networkId === 42170) {
         // Arbitrum Nova
         urls = [
           "https://nova.arbitrum.io/rpc",
         ];
-      } else if (networkId === 42766) {
-        // ZKFair
-        urls = [
-          "https://rpc.zkfair.io",
-        ];
       } else if (networkId === 59144) {
         // Linea
         urls = [
           "https://rpc.linea.build/"
         ];
-      } else if (networkId === 80001) {
-        // Mumbai testnet (Polygon testnet)
-        urls = [
-          "https://matic-mumbai.chainstacklabs.com"
-        ]
-      } else if (networkId === 167000) {
-        // Taiko mainnet
-        urls = [
-          "https://rpc.taiko.xyz"
-        ]
-      } else if (networkId === 167007) {
-        // Taiko Jolnir testnet
-        urls = [
-          "https://rpc.jolnir.taiko.xyz"
-        ]
-      } else if (networkId === 167008) {
-        // Taiko Katla testnet
-        urls = [
-          "https://rpc.katla.taiko.xyz"
-        ]
-      } else if (networkId === 167009) {
-        // Taiko Hekla testnet
-        urls = [
-          "https://rpc.hekla.taiko.xyz"
-        ]
-      } else if (networkId === 421611) {
-        // Arbitrum Rinkeby testnet
-        urls = [
-          "https://rinkeby.arbitrum.io/rpc"
-        ];
-      } else if (networkId === 421613) {
-        // Arbitrum Goerli testnet
-        urls = [
-          "https://goerli-rollup.arbitrum.io/rpc"
-        ];
-      } else if (networkId === 534352) {
-        // Scroll
-        urls = [
-          "https://rpc.scroll.io/"
-        ];
-      } else if (networkId === 1313161555) {
-        // Aurora testnet
-        urls = [
-          "https://testnet.aurora.dev"
-        ];
-      }
+      } 
 
       if (urls) {
         const providers = urls.map(url => new ethers.providers.JsonRpcProvider(url));

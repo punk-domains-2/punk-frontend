@@ -1,0 +1,309 @@
+{
+  ".arbitrum": {
+    "chainId": 42161,
+    "chainName": "Arbitrum",
+    "address": "0x337EB5061943ECd247649d58D35Dbab0b40D67E0",
+    "show": true,
+    "website": ""
+  },
+  ".arbi": {
+    "chainId": 42161,
+    "chainName": "Arbitrum",
+    "address": "0xe97456E0fB121F65422F43ccbd4A07a0e269B534",
+    "show": true,
+    "website": ""
+  },
+  ".smol": {
+    "chainId": 42161,
+    "chainName": "Arbitrum",
+    "address": "0xE0d972817e94c5FF9BDc49a63d8927A0bA833E4f",  
+    "show": false,
+    "website": ""
+  },
+  ".punkangel": {
+    "chainId": 42161,
+    "chainName": "Arbitrum",
+    "address": "0xcC66213645474a7B61BAf95330D01e50789eaF4b",
+    "show": false,
+    "website": "https://punk.domains/#/punkangel"
+  },
+  ".ppl": {
+    "chainId": 42161,
+    "chainName": "Arbitrum",
+    "address": "0xbC9d19e5f97a572f428F7292DBf3dc182Cc05C82",
+    "show": false,
+    "website": ""
+  },
+  ".misie": {
+    "chainId": 42161,
+    "chainName": "Arbitrum",
+    "address": "0x526Ff108F5d422d0e1d6650E2Bc015BBE1fdb058",
+    "show": false,
+    "website": ""
+  },
+  ".alnova": {
+    "chainId": 42170,
+    "chainName": "Arbitrum Nova",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": true,
+    "website": ""
+  },
+  ".basebook": {
+    "chainId": 8453,
+    "chainName": "Base",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": false,
+    "website": ""
+  },
+  ".based": {
+    "chainId": 8453,
+    "chainName": "Base",
+    "address": "0x273dB54929d8392c1997Be361Da89D41af202a49",
+    "show": false,
+    "website": ""
+  },
+  ".basepunk": {
+    "chainId": 8453,
+    "chainName": "Base",
+    "address": "0xc2C543D39426bfd1dB66bBde2Dd9E4a5c7212876",
+    "show": false,
+    "website": ""
+  },
+  ".blastsniperz": {
+    "chainId": 81457,
+    "chainName": "Blast",
+    "address": "0xB241f801DFBa4a109EFA3f31C9269D437F2270aa",
+    "show": false,
+    "website": ""
+  },
+  ".safu": {
+    "chainId": 56,
+    "chainName": "BNB Smart Chain",
+    "address": "0xBDACF94dDCAB51c39c2dD50BffEe60Bb8021949a",
+    "show": true,
+    "website": ""
+  },
+  ".huwa": {
+    "chainId": 56,
+    "chainName": "BNB Smart Chain",
+    "address": "0xeFBE0b46649B7A0F1e1D49CCa98aD9CF6bcFB096",
+    "show": false,
+    "website": ""
+  },
+  ".degen": {
+    "chainId": 666666666,
+    "chainName": "Degen Chain",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": true,
+    "website": "https://degenname.lol"
+  },
+  ".wildbunch": {
+    "chainId": 1,
+    "chainName": "Ethereum",
+    "address": "0xaa9E5Ade68C9C3Ea967Dc5dde731fd1f797152Cb",
+    "show": false,
+    "website": ""
+  },
+  ".fantom": {
+    "chainId": 250,
+    "chainName": "Fantom",
+    "address": "0xBDACF94dDCAB51c39c2dD50BffEe60Bb8021949a",
+    "show": true,
+    "website": "https://fantomname.org"
+  },
+  ".flr": {
+    "chainId": 14,
+    "chainName": "Flare",
+    "address": "0xBDACF94dDCAB51c39c2dD50BffEe60Bb8021949a",
+    "show": true,
+    "website": "https://flr.domains"
+  },
+  ".gnosis": {
+    "chainId": 100,
+    "chainName": "Gnosis Chain",
+    "address": "0xC3E8922657686EC63eaaa9FC1Fe06826802e7e0f",
+    "show": true,
+    "website": ""
+  },
+  ".xdai": {
+    "chainId": 100,
+    "chainName": "Gnosis Chain",
+    "address": "0xbca24d86e4ad1e011278faefc4ff191a731411ec",
+    "show": true,
+    "website": ""
+  },
+  ".bright": {
+    "chainId": 100,
+    "chainName": "Gnosis Chain",
+    "address": "0x3490c9817c45a2a394b11a3807f58a8325235ae0",
+    "show": false,
+    "website": ""
+  },
+  ".giveth": {
+    "chainId": 100,
+    "chainName": "Gnosis Chain",
+    "address": "0xEEa3e593CDAf9D18780f9D58BAD142AF6Bd9522a",
+    "show": true,
+    "website": "https://giveth.punk.domains"
+  },
+  ".alkroma": {
+    "chainId": 255,
+    "chainName": "Kroma",
+    "address": "0x6c66f1d5684630fb69350a7a88bcca60629d7252",
+    "show": false,
+    "website": ""
+  },
+  ".alinea": {
+    "chainId": 59144,
+    "chainName": "Linea",
+    "address": "0x6c66f1d5684630fb69350a7a88bcca60629d7252",
+    "show": true,
+    "website": ""
+  },
+  ".modechat": {
+    "chainId": 34443,
+    "chainName": "Mode",
+    "address": "0x523a7050df3DC7E96B7faAF4dDECCc244d886a90",
+    "show": false,
+    "website": ""
+  },
+  ".ion": {
+    "chainId": 34443,
+    "chainName": "Mode",
+    "address": "0x2eDB84A03e5AC3C17CF0e151fC4970F13834B36E",
+    "show": false,
+    "website": ""
+  },
+  ".wagmi": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0xC3E8922657686EC63eaaa9FC1Fe06826802e7e0f",
+    "show": true,
+    "website": ""
+  },
+  ".optimism": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0xBca24d86e4Ad1e011278FaEFc4fF191a731411EC",
+    "show": true,
+    "website": ""
+  },
+  ".spartan": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0x3490C9817C45A2a394b11A3807f58a8325235aE0",
+    "show": true,
+    "website": ""
+  },
+  ".l2": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0x9A7657d1593032C75d70950707870c3cC7ca45DC",
+    "show": true,
+    "website": ""
+  },
+  ".op": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0xC16aCAdf99E4540E6f4E6Da816fd6D2A2C6E1d4F",
+    "show": true,
+    "website": "https://optimistic.domains"
+  },
+  ".pool": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0xf2C9E463592BD440f0D422E944E5F95c79404586",
+    "show": false,
+    "website": ""
+  },
+  ".dope": {
+    "chainId": 10,
+    "chainName": "Optimism",
+    "address": "0x1d33989185AA79a3B9173bC7B1137E527C6A262b",
+    "show": false,
+    "website": ""
+  },
+  ".ape": {
+    "chainId": 137,
+    "chainName": "Polygon",
+    "address": "0x794a8390D94E32b086908D2bA9D66300aA163C62",
+    "show": true,
+    "website": ""
+  },
+  ".poly": {
+    "chainId": 137,
+    "chainName": "Polygon",
+    "address": "0x70Ac07C50131b7bb2c8Bd9466D8d2add30B7759f",
+    "show": true,
+    "website": ""
+  },
+  ".klima": {
+    "chainId": 137,
+    "chainName": "Polygon",
+    "address": "0xe8b97542A433e7eCc7bB791872af04DF02A1a6E4",
+    "show": false,
+    "website": ""
+  },
+  ".basin": {
+    "chainId": 137,
+    "chainName": "Polygon",
+    "address": "0x4bF5A99eA2F8De061f7D77BA9edd749503D945Da",
+    "show": false,
+    "website": ""
+  },
+  ".scrolly": {
+    "chainId": 534352,
+    "chainName": "Scroll",
+    "address": "0xc2C543D39426bfd1dB66bBde2Dd9E4a5c7212876",
+    "show": false,
+    "website": ""
+  },
+  ".alscroll": {
+    "chainId": 534352,
+    "chainName": "Scroll",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": false,
+    "website": ""
+  },
+  ".sgb": {
+    "chainId": 19,
+    "chainName": "Songbird",
+    "address": "0xBDACF94dDCAB51c39c2dD50BffEe60Bb8021949a",
+    "show": true,
+    "website": "https://songbird.domains"
+  },
+  ".satrap": {
+    "chainId": 19,
+    "chainName": "Songbird",
+    "address": "0xeFBE0b46649B7A0F1e1D49CCa98aD9CF6bcFB096",
+    "show": false,
+    "website": ""
+  },
+  ".meow": {
+    "chainId": 55244,
+    "chainName": "Superposition",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": true,
+    "website": "https://meow.domains"
+  },
+  ".🥁": {
+    "chainId": 167000,
+    "chainName": "Taiko",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": false,
+    "website": ""
+  },
+  ".fairchat": {
+    "chainId": 42766,
+    "chainName": "ZKFair",
+    "address": "0x4087fb91A1fBdef05761C02714335D232a2Bf3a1",
+    "show": false
+  },
+  ".zksoul": {
+    "chainId": 324,
+    "chainName": "zkSync Era",
+    "address": "0xe36507aD67Ac0aE6D27D22b407A9338b136315df",
+    "show": true,
+    "website": "https://id.zkchat.net"
+  }
+}
