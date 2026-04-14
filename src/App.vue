@@ -1,5 +1,16 @@
 <template>
 
+  <div v-if="showNotificationStripe" class="notification-stripe">
+    <span>
+      A new Punk Domains website is available at
+      <a href="https://app.punk.domains/" target="_blank" rel="noopener noreferrer">app.punk.domains</a>
+      — we will gradually migrate to it.
+    </span>
+    <button class="notification-stripe__close" @click="dismissStripe" aria-label="Dismiss">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
   <Navbar />
 
   <div class="main-container">
@@ -12,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { ethers } from 'ethers';
 import { useEthers, useWallet } from 'vue-dapp';
 import { mapActions, mapGetters, mapMutations } from 'vuex';
@@ -95,6 +106,12 @@ export default {
     const { address, chainId, isActivated } = useEthers();
     const { connect } = useWallet();
 
+    const showNotificationStripe = ref(true);
+
+    function dismissStripe() {
+      showNotificationStripe.value = false;
+    }
+
     onMounted(() => {
       // if user already connected via MetaMask before, connect them automatically on the next visit
       if (!isActivated.value && localStorage.getItem("connected") == "metamask") {
@@ -103,7 +120,8 @@ export default {
     })
 
     return {
-      address, chainId, connect, isActivated
+      address, chainId, connect, isActivated,
+      showNotificationStripe, dismissStripe
     }
   },
 
@@ -137,6 +155,46 @@ export default {
 </script>
 
 <style scoped>
+.notification-stripe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(90deg, #6f42c1, #d63384);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.notification-stripe a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.notification-stripe a:hover {
+  opacity: 0.85;
+}
+
+.notification-stripe__close {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.1rem 0.3rem;
+  opacity: 0.8;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.notification-stripe__close:hover {
+  opacity: 1;
+}
+
 .main-container {
   padding: 20px;
   max-width: 1400px;
